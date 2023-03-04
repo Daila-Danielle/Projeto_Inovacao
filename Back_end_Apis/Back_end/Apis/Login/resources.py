@@ -5,7 +5,7 @@ from Database.Database import DB
 
 import json
 
-with open("Back_end\Apis\Dados_cadastro\Db_source.json", encoding='utf-8') as my_json:
+with open("Back_end_Apis\Back_end\Apis\Dados_cadastro\Db_source.json", encoding='utf-8') as my_json:
     dados = json.load(my_json)
     setings = dados["Setings"]["MySQL"]
     
