@@ -1,0 +1,12 @@
+[default]
+DEBUG = true
+
+
+EXTENSIONS = [
+    "Apis.Rotas:init_App",  
+]
+
+
+APIS = [
+    "resources:Dados_Cadastro",  
+]
