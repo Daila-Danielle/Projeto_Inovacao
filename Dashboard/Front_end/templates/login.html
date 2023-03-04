@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8 " name="viewport" content="width=device-width, initial-scale=1.0">
+        <title >Dashboard Separador de Materiais</title>
+        <link rel="stylesheet" href="static/main.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </head>
+
+    <body class="p-3 m-0 border-3 bodylogin" style="background-image: url(/static/Imagens/login_backgroud1.jpg);background-size: cover;">
+        <section class="py-3 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light" style="color:white" >Separador de Materiais</h1>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal modal-signin position-static d-block py-3" tabindex="-1" role="dialog" id="modalSignin">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-4 shadow">
+
+                    <div class="modal-header p-5 pb-4 ">
+                        <h2 class="fw-bold mb-0">Tela de login</h2>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <form method="post" action="logar">
+
+                            <div class="form-floating mb-2">
+                                <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="0000"
+                                    name="nome">
+                                <label for="floatingInput">Nome</label>
+                            </div>
+
+                            <div class="form-floating mb-2">
+                                <input type="password" class="form-control rounded-3" id="floatingPassword"
+                                    placeholder="Password" name="senha">
+                                <label for="floatingPassword">Senha</label>
+                            </div>
+
+                            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Entrar</button>  
+                        </form>
+                        <br>
+                    
+                        <center><small class="text-muted">
+                            {% with messages = get_flashed_messages() %}
+                                <H5>{{ messages[0]}}</H5>
+                            {% endwith %} 
+                        </small></center><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
